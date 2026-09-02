@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 - Exercícios Cap. 2 | Portfólio Acadêmico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="titulo">Portfólio Acadêmico</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="semestre1.html">Semestre 1</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="referencias.html">Referências</a>
+    <a href="contatos.html">Contatos</a>
+  </nav>
+</header>
+<div class="breadcrumb"><a href="index.html">Início</a> › <a href="semestre1.html">Semestre 1</a> › <a href="semestre1-algoritmo.html">Algoritmo e Lógica de Programação</a> › <a href="semestre1-algoritmo-p1.html">P1</a> › Exercícios Cap. 2</div>
+
+<main>
+<h1>Capítulo 2 — Tópicos Preliminares</h1>
+<p>Resolução dos exercícios de fixação (1 a 5) e dos exercícios propostos do Capítulo 2.</p>
+
+<h2>Exercício de Fixação 1 — Tipos Primitivos</h2>
+<div class="exercicio">
+<span class="badge">1.1</span>
+<p class="enunciado">Determine o tipo primitivo de informação presente em cada sentença.</p>
+<table>
+<tr><th>Item</th><th>Sentença</th><th>Tipo(s) primitivo(s)</th></tr>
+<tr><td>a</td><td>A placa "Pare!" tinha 2 furos de bala.</td><td>Caracter ("Pare!") e Inteiro (2)</td></tr>
+<tr><td>b</td><td>Josefina subiu 5 degraus para pegar uma maçã boa.</td><td>Inteiro (5)</td></tr>
+<tr><td>c</td><td>Alberta levou 3,5 horas para chegar ao hospital.</td><td>Real (3,5)</td></tr>
+<tr><td>d</td><td>Astrogilda pintou "Preserve o meio ambiente" e ficou devendo $ 100,59.</td><td>Caracter (frase) e Real (100,59)</td></tr>
+<tr><td>e</td><td>Felisberto recebeu sua 18ª medalha com 57,3 segundos nos 100 metros.</td><td>Inteiro (18ª, 100) e Real (57,3)</td></tr>
+</table>
+</div>
+
+<h2>Exercícios de Fixação 2 — Identificadores e Declaração</h2>
+<div class="exercicio">
+<span class="badge">2.1</span>
+<p class="enunciado">Assinale os identificadores válidos.</p>
+<p>Regras: começar por letra; conter apenas letras e dígitos depois; sem caracteres especiais.</p>
+<table>
+<tr><th>Identificador</th><th>Válido?</th><th>Motivo</th></tr>
+<tr><td>(X)</td><td>Não</td><td>usa parênteses</td></tr>
+<tr><td>U2</td><td><strong>Sim</strong></td><td>letra seguida de dígito</td></tr>
+<tr><td>AH!</td><td>Não</td><td>caractere especial "!"</td></tr>
+<tr><td>"ALUNO"</td><td>Não</td><td>usa aspas</td></tr>
+<tr><td>#55</td><td>Não</td><td>começa com caractere especial</td></tr>
+<tr><td>KM/L</td><td>Não</td><td>usa "/"</td></tr>
+<tr><td>UYT</td><td><strong>Sim</strong></td><td>só letras</td></tr>
+<tr><td>ASDRUBAL</td><td><strong>Sim</strong></td><td>só letras</td></tr>
+<tr><td>AB*C</td><td>Não</td><td>usa "*"</td></tr>
+<tr><td>0&amp;0</td><td>Não</td><td>começa com dígito e usa "&amp;"</td></tr>
+<tr><td>P{O}</td><td>Não</td><td>usa chaves</td></tr>
+<tr><td>B52</td><td><strong>Sim</strong></td><td>letra seguida de dígitos</td></tr>
+<tr><td>Rua</td><td><strong>Sim</strong></td><td>só letras</td></tr>
+<tr><td>CEP</td><td><strong>Sim</strong></td><td>só letras</td></tr>
+<tr><td>dia/mês</td><td>Não</td><td>usa "/"</td></tr>
+</table>
+</div>
+
+<div class="exercicio">
+<span class="badge">2.2</span>
+<p class="enunciado">Declare corretamente as variáveis NB (nota do aluno), NA (nome do aluno), NMat (número de matrícula) e SX (sexo).</p>
+<pre>
+inteiro: NMat;
+real: NB;
+caracter: NA, SX;
+</pre>
+</div>
+
+<div class="exercicio">
+<span class="badge">2.3</span>
+<p class="enunciado">Encontre os erros na declaração de variáveis:</p>
+<pre>
+inteiro: Endereço, NFilhos;
+caracter: Idade, X;
+real: XPTO, C, Peso, R$;
+lógico: Lâmpada, C;
+</pre>
+<p><strong>Erros encontrados:</strong></p>
+<p>1) <strong>R$</strong> não é um identificador válido — contém o caractere especial "$".</p>
+<p>2) A variável <strong>C</strong> foi declarada duas vezes com tipos diferentes (real e lógico) — um identificador não pode ser reutilizado para duas variáveis distintas.</p>
+<p>3) <strong>Endereço</strong> foi declarado como inteiro, mas endereço é uma informação alfanumérica — deveria ser do tipo caracter.</p>
+<p>4) <strong>Idade</strong> foi declarada como caracter, mas idade é uma informação numérica — deveria ser do tipo inteiro.</p>
+</div>
+
+<h2>Exercício de Fixação 3 — Expressões Aritméticas</h2>
+<div class="exercicio">
+<span class="badge">3.1</span>
+<p class="enunciado">Sendo A = 5, B = 10, C = −8 (inteiros) e D = 1,5 (real), calcule:</p>
+<table>
+<tr><th>Expressão</th><th>Resolução</th><th>Resultado</th></tr>
+<tr><td>a) 2*A mod 3 − C</td><td>(2*5) mod 3 − (−8) = 10 mod 3 + 8 = 1 + 8</td><td><strong>9</strong></td></tr>
+<tr><td>b) rad(−2*C) div 4</td><td>rad(16) div 4 = 4 div 4</td><td><strong>1</strong></td></tr>
+<tr><td>c) ((20 div 3) div 3) + pot(8,2)/2</td><td>(6 div 3) + 64/2 = 2 + 32</td><td><strong>34</strong></td></tr>
+<tr><td>d) (30 mod 4 * pot(3,3)) * −1</td><td>(2 * 27) * −1 = 54 * −1</td><td><strong>−54</strong></td></tr>
+<tr><td>e) pot(−C,2) + (D*10)/A</td><td>pot(8,2) + 15/5 = 64 + 3</td><td><strong>67</strong></td></tr>
+<tr><td>f) rad(pot(A,B/A)) + C*D</td><td>rad(pot(5,2)) + (−8*1,5) = rad(25) − 12 = 5 − 12</td><td><strong>−7</strong></td></tr>
+</table>
+</div>
+
+<h2>Exercício de Fixação 4 — Expressões Lógicas</h2>
+<div class="exercicio">
+<span class="badge">4.1</span>
+<p class="enunciado">Sendo A = 2, B = 7, C = 3,5 e L (lógico) = falsidade (F), determine os resultados:</p>
+<table>
+<tr><th>Expressão</th><th>Resolução</th><th>Resultado</th></tr>
+<tr><td>a) B = A*C e (L ou V)</td><td>(7 = 7=V) e (F ou V=V) → V e V</td><td><strong>V</strong></td></tr>
+<tr><td>b) B &gt; A ou B = pot(A,A)</td><td>(7&gt;2=V) ou (7=4=F) → V ou F</td><td><strong>V</strong></td></tr>
+<tr><td>c) L e B div A &gt;= C ou não A &lt;= C</td><td>(F e (3&gt;=3,5=F)) ou não(2&lt;=3,5=V) → F ou F</td><td><strong>F</strong></td></tr>
+<tr><td>d) não L ou V e rad(A+B) &gt;= C</td><td>V ou (V e (rad(9)=3 &gt;= 3,5=F)) → V ou F</td><td><strong>V</strong></td></tr>
+<tr><td>e) B/A = C ou B/A &lt;&gt; C</td><td>(3,5=3,5=V) ou (3,5&lt;&gt;3,5=F) → V ou F</td><td><strong>V</strong></td></tr>
+<tr><td>f) L ou pot(B,A) &lt;= C*10+A*B</td><td>F ou (49 &lt;= 35+14=49=V) → F ou V</td><td><strong>V</strong></td></tr>
+</table>
+</div>
+
+<h2>Exercício de Fixação 5 — Comando de Atribuição</h2>
+<div class="exercicio">
+<span class="badge">5.1</span>
+<p class="enunciado">Encontre os erros nos comandos de atribuição, considerando: lógico: A; real: B, C; inteiro: D;</p>
+<p><strong>Erros típicos identificados neste tipo de exercício:</strong></p>
+<p>1) Atribuir a uma variável <strong>inteira</strong> (D) o valor de uma variável <strong>real</strong> (B) sem conversão é incompatível com a declaração de tipos (D ← B; é um erro de tipo).</p>
+<p>2) Atribuir a uma variável <strong>real</strong> o resultado de uma expressão <strong>relacional</strong> (que produz sempre um valor lógico, V ou F) — por exemplo, "B ← pot(6,2)/3 &lt;= rad(9)*4;" está errado porque o lado direito é uma expressão lógica e B é do tipo real.</p>
+<p>3) É preciso sempre existir apenas <strong>um identificador</strong> à esquerda do símbolo de atribuição — encadear duas atribuições na mesma linha (ex.: "C ← B ← 3,5;") não é uma construção válida.</p>
+<p><em>Observação: como parte deste enunciado chegou cortada na digitalização do material, resolvemos aqui os três tipos de erro de atribuição mais comuns que o capítulo aborda (incompatibilidade de tipo numérico, atribuição de valor lógico a variável não lógica, e mais de um identificador à esquerda da seta).</em></p>
+</div>
+
+<h2>Exercícios Propostos</h2>
+
+<div class="exercicio">
+<span class="badge">1</span>
+<p class="enunciado">Explique o que ocorre em cada linha do trecho de algoritmo abaixo:</p>
+<pre>
+inteiro: X, Y;
+real: Z;
+leia (X);
+escreva (X, "elevado ao cubo =", pot(x,3));
+leia (Y);
+escreva (X+Y);
+Z ← X/Y;
+escreva (Z);
+Z ← Z + 1;
+X ← (Y+X) mod 2;
+escreva (X);
+</pre>
+<p><strong>Explicação linha a linha:</strong> declaram-se as variáveis inteiras X e Y e a variável real Z. O algoritmo lê um valor e guarda em X; em seguida escreve o valor de X junto com o texto "elevado ao cubo =" e o resultado de X elevado ao cubo. Depois lê um novo valor e guarda em Y, e escreve a soma X+Y. A divisão X/Y é calculada e armazenada em Z (por isso Z precisa ser do tipo real, já que a divisão pode gerar valor não inteiro). O valor de Z é mostrado, depois é incrementado em 1 (Z ← Z+1). Por fim, X recebe o resto da divisão de (Y+X) por 2 — ou seja, X passa a valer 0 ou 1, dependendo da paridade de Y+X — e esse novo valor de X é mostrado.</p>
+</div>
+
+<div class="exercicio">
+<span class="badge">2</span>
+<p class="enunciado">Cite e discorra sobre três exemplos do dia a dia em que se encontram entrada, saída e processamento.</p>
+<p><strong>a) Preparar um café:</strong> entrada = água, pó de café e filtro; processamento = coar a água quente através do pó; saída = café pronto.</p>
+<p><strong>b) Usar um caixa eletrônico:</strong> entrada = cartão, senha e valor solicitado; processamento = validação da senha e cálculo do saldo disponível; saída = dinheiro entregue e recibo impresso.</p>
+<p><strong>c) Cozinhar macarrão:</strong> entrada = água, macarrão e sal; processamento = fervura por um tempo determinado; saída = macarrão cozido pronto para servir.</p>
+</div>
+
+<div class="exercicio">
+<span class="badge">3</span>
+<p class="enunciado">Faça uma analogia de entrada, processamento e saída com: (a) ler e sintetizar um livro; (b) dialogar com outra pessoa.</p>
+<p><strong>a) Ler e sintetizar um livro:</strong> entrada = o texto lido; processamento = a compreensão e organização mental das ideias do texto; saída = o resumo/síntese produzido a partir da leitura.</p>
+<p><strong>b) Dialogar com outra pessoa:</strong> entrada = a fala do interlocutor (o que ouvimos); processamento = a interpretação do que foi dito e a formulação de uma resposta; saída = nossa própria fala em resposta.</p>
+</div>
+
+</main>
+<footer>Portfólio Acadêmico — Fatec Indaiatuba</footer>
+</body>
+</html>
