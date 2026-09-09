@@ -12,9 +12,9 @@ Este repositório contém a **Avaliação P1** da disciplina de Algoritmo e Lóg
 (professora Me. Waldinelly Martha Alves Costa), que pede:
 
 - **Item A** — lista de exercícios resolvidos dos capítulos 1 e 2 do livro-texto (Forbellone e
-  Eberspächer, *Lógica de Programação*);
-- **Item B** — resumo do capítulo 3 (Estruturas de Controle) + 4 exercícios de exemplo;
-- **Item C** — tudo publicado em um portfólio digital (este site).
+  Eberspächer, *Lógica de Programação*), atividade em grupo;
+- **Item B** — resumo do capítulo 3 (Estruturas de Controle) + 4 exercícios de exemplo, também em grupo;
+- **Item C** — tudo publicado em um portfólio digital individual (este site).
 
 Os algoritmos foram escritos em **VisuAlg** (Portugol).
 
@@ -23,11 +23,11 @@ Os algoritmos foram escritos em **VisuAlg** (Portugol).
 ```
 portfolio/
 ├── index.html              → página inicial
-├── sobre.html               → curso, integrantes do grupo, experiência profissional
-├── projetos.html            → projetos do grupo
+├── sobre.html               → curso, perfil do aluno, experiência profissional
+├── projetos.html            → projetos
 ├── eventos.html             → eventos acadêmicos
 ├── referencias.html         → bibliografia utilizada
-├── contatos.html            → como falar com o grupo
+├── contatos.html            → como falar comigo
 ├── css/
 │   └── style.css            → estilo compartilhado por todas as páginas
 └── semestre1/
@@ -51,7 +51,9 @@ Basta alterar os arquivos `.html`/`.css` diretamente (localmente ou pelo editor 
 enviar (`push`) para a branch `main` — o GitHub Pages atualiza o site publicado automaticamente em
 poucos minutos.
 
-## Integrantes
+## Autor
 
 - Pedro — [GitHub](https://github.com/Razante21)
-- *(demais integrantes do grupo — a preencher)*
+
+Portfólio individual. Os itens A e B (exercícios) foram resolvidos em grupo, conforme pedido pela professora,
+mas este portfólio digital é de autoria individual.

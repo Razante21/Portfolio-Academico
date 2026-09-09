@@ -211,3 +211,60 @@ ul.card-list a {
   font-weight: 600;
   text-decoration: none;
 }
+
+.hero {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+  color: white;
+  border-radius: 10px;
+  padding: 40px 32px;
+  margin-top: 8px;
+}
+
+.hero h1 {
+  color: white;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0;
+  opacity: 0.92;
+  max-width: 640px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.skill-badge {
+  display: inline-block;
+  background: var(--cinza-claro);
+  border: 1px solid var(--cinza-borda);
+  color: var(--azul-escuro);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 0.88rem;
+}
+
+.social-links a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
