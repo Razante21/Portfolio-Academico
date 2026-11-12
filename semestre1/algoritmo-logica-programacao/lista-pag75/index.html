@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de exercícios — pág. 75 | Portfólio Acadêmico</title>
+<link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+<header>
+  <div class="titulo">Portfólio Acadêmico</div>
+  <nav>
+    <a href="../../../index.html">Início</a>
+    <a href="../../../sobre.html">Sobre</a>
+    <a href="../../index.html">Semestre 1</a>
+    <a href="../../../projetos.html">Projetos</a>
+    <a href="../../../eventos.html">Eventos</a>
+    <a href="../../../referencias.html">Referências</a>
+    <a href="../../../contatos.html">Contatos</a>
+  </nav>
+</header>
+<div class="breadcrumb"><a href="../../../index.html">Início</a> › <a href="../../index.html">Semestre 1</a> › <a href="../index.html">Algoritmo e Lógica de Programação</a> › Lista de exercícios — pág. 75</div>
+
+<main>
+<h1>Lista de exercícios — pág. 75 (vetores)</h1>
+<p>Exercícios propostos da página 75 do livro-texto (Forbellone e Eberspächer), sobre vetores. Cada exercício é
+resolvido em <strong>Portugol</strong> (VisuAlg) e em <strong>Python</strong>.</p>
+<p><strong>Data de realização:</strong> 11/11/2026</p>
+
+<div class="exercicio">
+<span class="badge">1.1</span>
+<p>Dado o vetor <code>V</code> preenchido com os valores 2, 6, 8, 3, 10, 9, 1, 21, 33 e 14 (posições 1 a 10), e
+<code>X = 2</code>, <code>Y = 4</code>, obtenha o valor de várias expressões de acesso ao vetor.</p>
+<h3>Portugol</h3>
+<pre>
+algoritmo "ex1_1"
+var
+   V: vetor[1..10] de inteiro
+   X, Y: inteiro
+inicio
+   V[1] &lt;- 2
+   V[2] &lt;- 6
+   V[3] &lt;- 8
+   V[4] &lt;- 3
+   V[5] &lt;- 10
+   V[6] &lt;- 9
+   V[7] &lt;- 1
+   V[8] &lt;- 21
+   V[9] &lt;- 33
+   V[10] &lt;- 14
+   X &lt;- 2
+   Y &lt;- 4
+
+   escreval("a) ", V[X + 1])
+   escreval("b) ", V[X + 2])
+   escreval("c) ", V[X + 3])
+   escreval("d) ", V[X * 4])
+   escreval("e) ", V[X * 1])
+   escreval("f) ", V[Y * 2])
+   escreval("g) ", V[X * 3])
+   escreval("h) ", V[V[X + Y]])
+   escreval("i) ", V[X + Y])
+   escreval("j) ", V[8 - V[2]])
+   escreval("l) ", V[V[4]])
+   escreval("m) ", V[V[V[7]]])
+   escreval("n) ", V[V[1] * V[4]])
+   escreval("o) ", V[X + 4])
+fimalgoritmo
+</pre>
+<h3>Python</h3>
+<pre>
+V = [0, 2, 6, 8, 3, 10, 9, 1, 21, 33, 14]  # posição 0 não é usada
+X = 2
+Y = 4
+
+print("a)", V[X + 1])
+print("b)", V[X + 2])
+print("c)", V[X + 3])
+print("d)", V[X * 4])
+print("e)", V[X * 1])
+print("f)", V[Y * 2])
+print("g)", V[X * 3])
+print("h)", V[V[X + Y]])
+print("i)", V[X + Y])
+print("j)", V[8 - V[2]])
+print("l)", V[V[4]])
+print("m)", V[V[V[7]]])
+print("n)", V[V[1] * V[4]])
+print("o)", V[X + 4])
+</pre>
+</div>
+
+<div class="exercicio">
+<span class="badge">1.2</span>
+<p>Leia 20 valores para os vetores <code>A</code> e <code>B</code> e 20 operadores (+, -, * ou /) para o vetor
+<code>OP</code>. Calcule, para cada posição, o resultado da operação entre <code>A[i]</code> e <code>B[i]</code>
+indicada por <code>OP[i]</code>, guardando em <code>R</code>.</p>
+<h3>Portugol</h3>
+<pre>
+algoritmo "ex1_2"
+var
+   A, B: vetor[1..20] de inteiro
+   OP: vetor[1..20] de caractere
+   R: vetor[1..20] de real
+   i: inteiro
+inicio
+   para i de 1 ate 20 faca
+      leia(A[i])
+   fimpara
+   para i de 1 ate 20 faca
+      leia(B[i])
+   fimpara
+   para i de 1 ate 20 faca
+      leia(OP[i])
+   fimpara
+
+   para i de 1 ate 20 faca
+      se OP[i] = "+" entao
+         R[i] &lt;- A[i] + B[i]
+      fimse
+      se OP[i] = "-" entao
+         R[i] &lt;- A[i] - B[i]
+      fimse
+      se OP[i] = "*" entao
+         R[i] &lt;- A[i] * B[i]
+      fimse
+      se OP[i] = "/" entao
+         R[i] &lt;- A[i] / B[i]
+      fimse
+   fimpara
+
+   para i de 1 ate 20 faca
+      escreval(R[i])
+   fimpara
+fimalgoritmo
+</pre>
+<h3>Python</h3>
+<pre>
+A = []
+B = []
+OP = []
+R = []
+
+for i in range(20):
+    A.append(int(input("A: ")))
+for i in range(20):
+    B.append(int(input("B: ")))
+for i in range(20):
+    OP.append(input("Operação (+ - * /): "))
+
+for i in range(20):
+    if OP[i] == "+":
+        R.append(A[i] + B[i])
+    elif OP[i] == "-":
+        R.append(A[i] - B[i])
+    elif OP[i] == "*":
+        R.append(A[i] * B[i])
+    else:
+        R.append(A[i] / B[i])
+
+print(R)
+</pre>
+</div>
+
+<div class="exercicio">
+<span class="badge">1.3</span>
+<p>Leia 20 valores reais para os vetores <code>A</code> e <code>B</code> (sem zeros em <code>B</code>) e calcule
+<code>A[k] × (1 / B[k])</code> para cada posição, guardando o resultado em <code>R</code> em ordem intercalada
+(posições pares do índice de origem vão para a metade final de <code>R</code>, ímpares para a inicial).</p>
+<h3>Portugol</h3>
+<pre>
+algoritmo "ex1_3"
+var
+   A, B, R: vetor[1..20] de real
+   i, k: inteiro
+inicio
+   para i de 1 ate 20 faca
+      leia(A[i])
+   fimpara
+   para i de 1 ate 20 faca
+      leia(B[i])
+   fimpara
+
+   para k de 0 ate 19 faca
+      se k mod 2 = 0 entao
+         R[10 - k \ 2] &lt;- A[k + 1] * (1 / B[k + 1])
+      senao
+         R[11 + k \ 2] &lt;- A[k + 1] * (1 / B[k + 1])
+      fimse
+   fimpara
+
+   para i de 1 ate 20 faca
+      escreval(R[i])
+   fimpara
+fimalgoritmo
+</pre>
+<h3>Python</h3>
+<pre>
+A = []
+B = []
+R = [0] * 20
+
+for i in range(20):
+    A.append(float(input("A: ")))
+for i in range(20):
+    B.append(float(input("B (não use 0): ")))
+
+for k in range(20):
+    valor = A[k] * (1 / B[k])
+    if k % 2 == 0:
+        R[9 - k // 2] = valor
+    else:
+        R[10 + k // 2] = valor
+
+print(R)
+</pre>
+</div>
+
+<div class="exercicio">
+<span class="badge">1.4</span>
+<p>Leia 20 valores para o vetor <code>V</code> e ordene-o em ordem crescente usando o método da <strong>seleção
+direta</strong> (encontrar o menor elemento restante e trocá-lo de posição a cada passo).</p>
+<h3>Portugol</h3>
+<pre>
+algoritmo "ex1_4"
+var
+   V: vetor[1..20] de inteiro
+   i, j, menor, aux: inteiro
+inicio
+   para i de 1 ate 20 faca
+      leia(V[i])
+   fimpara
+
+   para i de 1 ate 19 faca
+      menor &lt;- i
+      para j de i + 1 ate 20 faca
+         se V[j] &lt; V[menor] entao
+            menor &lt;- j
+         fimse
+      fimpara
+      aux &lt;- V[i]
+      V[i] &lt;- V[menor]
+      V[menor] &lt;- aux
+   fimpara
+
+   para i de 1 ate 20 faca
+      escreval(V[i])
+   fimpara
+fimalgoritmo
+</pre>
+<h3>Python</h3>
+<pre>
+V = []
+for i in range(20):
+    V.append(int(input("Valor: ")))
+
+for i in range(19):
+    menor = i
+    for j in range(i + 1, 20):
+        if V[j] < V[menor]:
+            menor = j
+    aux = V[i]
+    V[i] = V[menor]
+    V[menor] = aux
+
+print(V)
+</pre>
+</div>
+
+<div class="exercicio">
+<span class="badge">1.5</span>
+<p>Leia 20 valores para o vetor <code>V</code> e ordene-o em ordem crescente usando o método da
+<strong>bolha</strong> (comparar pares vizinhos e trocá-los quando estiverem fora de ordem, repetindo até o
+vetor ficar ordenado).</p>
+<h3>Portugol</h3>
+<pre>
+algoritmo "ex1_5"
+var
+   V: vetor[1..20] de inteiro
+   i, passo, aux: inteiro
+inicio
+   para i de 1 ate 20 faca
+      leia(V[i])
+   fimpara
+
+   para passo de 1 ate 19 faca
+      para i de 1 ate 19 faca
+         se V[i] &gt; V[i + 1] entao
+            aux &lt;- V[i]
+            V[i] &lt;- V[i + 1]
+            V[i + 1] &lt;- aux
+         fimse
+      fimpara
+   fimpara
+
+   para i de 1 ate 20 faca
+      escreval(V[i])
+   fimpara
+fimalgoritmo
+</pre>
+<h3>Python</h3>
+<pre>
+V = []
+for i in range(20):
+    V.append(int(input("Valor: ")))
+
+for passo in range(19):
+    for i in range(19):
+        if V[i] > V[i + 1]:
+            aux = V[i]
+            V[i] = V[i + 1]
+            V[i + 1] = aux
+
+print(V)
+</pre>
+</div>
+
+</main>
+<footer>Portfólio Acadêmico — Fatec Indaiatuba<br><span style="opacity:0.75;">Desenvolvido com auxílio de IA (Claude).</span></footer>
+</body>
+</html>
